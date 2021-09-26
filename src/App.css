@@ -1,38 +1,278 @@
-.App {
-  text-align: center;
+body{
+  background-color:rgba(226, 222, 222, 0.651);
+}
+.createEmployeeContainer{
+  display:flex;
+  flex-direction:column;
+  margin:20px;
+  padding:20px;
+  box-shadow:  0px 0px 1px 2px rgb(175, 175, 175);
+  color:rgb(104, 104, 104);
+  background-color:#fff;
+}
+.subContainerAddUser{
+  display:flex;
+  justify-content: space-between;
+}
+.subContainerAddUser div{
+  margin: 0 20px;
+  width:100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input{
+  border: none;
+  height:30px;
+  width:100%;
+  box-shadow:  0px 0px 1px 1px rgb(123, 123, 123); 
+  border-radius:2px;
+  caret-color:rgb(84, 84, 84) ;
+  color:rgb(84, 84, 84);
+  margin-bottom: 20px;
+  max-width: 250px;
+  border-radius:5px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input:focus{
+  outline: none;
+  box-shadow:  0px 0px 1px 2px rgb(123, 123, 123); 
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.submitButton{
+  display: block;
+  width:100px;
+  height: 40px;
+  background-color:rgb(0, 132, 255);
+  color:#fff;
+  border: none;
+  border-radius:5px;
+}
+.containerButtons{
+  margin-left: auto;
+}
+.submitButtonSecond{
+  width:100px;
+  height: 40px;
+  background-color:rgb(0, 132, 255);
+  color:#fff;
+  border: none;
+  border-radius:5px;
+  
+}
+.cancelButtonSecond{
+  width:100px;
+  height: 40px;
+  background-color:rgb(157, 160, 163);
+  color:rgb(255, 0, 0);
+  border: none;
+  border-radius:5px;
+  margin-left: 10px;
+}
+
+.createEmployeeContainerSecond{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction:column;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 20px;
+  box-shadow:  0px 0px 1px 2px rgb(175, 175, 175);
+  background-color: #fff;
+  border-radius:5px;
+  color: rgb(104, 104, 104);
+ 
 }
 
-.App-link {
-  color: #61dafb;
+
+.subContainerSecond{
+  display: flex;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subContainerSecond div{
+  width:30%;
+}
+.inputSecond{
+  border: none;
+  height:30px;
+  width:100%;
+  box-shadow:  0px 0px 1px 1px rgb(123, 123, 123); 
+  border-radius:2px;
+  caret-color:rgb(84, 84, 84) ;
+  color:rgb(84, 84, 84);
+  margin-bottom: 20px;
+  max-width: 300px;
+  border-radius:5px;
+}
+
+.inputSecond:focus{
+  outline: none;
+  box-shadow:  0px 0px 1px 2px rgb(123, 123, 123); 
+
+}
+
+
+.tableAllEmployee{
+  margin:20px auto;
+  width:100%;
+  
+}
+.tableContainer{
+  padding:20px;
+  box-shadow:  0px 0px 1px 2px rgb(123, 123, 123); 
+  width: 90%;
+  margin: 0 auto;
+  background-color:#fff;
+  border-radius: 5px;
+  color: rgb(75, 75, 75);
+}
+
+.tableAllEmployee, .tableRow, .tableRow td, .tableRow th{
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-color: rgb(75, 75, 75);
+}
+
+.tableViewUser{
+  width:100%;
+}
+
+.tableRow td{
+  padding:20px;
+}
+
+.allUserContainer h3{
+  margin-left: 50px;
+}
+
+.popUpDelete {
+  display: block;
+  width: 350px;
+  padding: 16px;
+  background-color: white;
+  z-index: 1002;
+  overflow: auto;
+  border:2px solid #000;
+  position:fixed; 
+  top: calc(50% - 100px);
+  left: calc(50% - 175px);
+  
+}
+.popUpDelete h3{
+  margin:10px 0;
+}
+.popUpDelete div{
+  width:100%;
+  text-align:center;
+}
+
+.popUpDelete button{
+  margin: 0 10px;
+  width: 100px;
+  height:30px;
+  background-color:#000;
+  color:#fff;
+}
+
+.editUserContainer{
+  display: block;
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  right: 25%;
+  padding: 16px;
+  background-color: white;
+  z-index: 1002;
+  overflow: auto;
+  border:2px solid #000;
+  color: rgb(104, 104, 104);
+  
+}
+
+.editUserContainer h3{
+  margin: 10px 0;  
+}
+
+.viewUserContainer{
+  display: block;
+  position: fixed;
+  top:10px;
+  left: 25%;
+  right: 25%;
+  padding: 16px;
+  background-color: white;
+  z-index: 1002;
+  overflow-y: auto;
+  border:2px solid #000;
+  color: rgb(104, 104, 104);
+  max-height: 90vh;
+}
+.cover{
+  position:fixed;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.8);
+  z-index:5;
+  width:100%;
+  height:100%; 
+}
+.detailsValue{
+  font-weight: 700;
+}
+
+.not-submitted{
+  color: rgb(255, 0, 0);
+  background-color: rgb(236, 144, 144);
+  margin:0;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 5px;
+
+}
+.submitted{
+  color: rgb(0, 129, 32);
+  background-color: rgb(125, 216, 147);
+  margin:0;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 5px;
+}
+
+.editUserSecondContainer{
+  display:flex;
+  justify-content: space-around;
+}
+
+.buttoncancel{
+  height:40px;
+  width: 40px;
+  background-color:#000;
+  color: #fff;
+  border: none ;
+  border-radius:50px;
+  
+}
+
+.viewUserContainer h2{
+  display: inline;
+
+}
+.titleContainer{
+  display:flex;
+  justify-content:space-between;
+}
+
+.buttonActionContainer button{
+  color: #fff;
+  margin: 0 2px ;
+  background-color: #000;
 }
